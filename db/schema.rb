@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_181206) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_05_215635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,7 +22,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_181206) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categories_expenses", force: :cascade do |t|
+  create_table "category_expense", force: :cascade do |t|
+    t.integer "cat_id", null: false
+    t.integer "exp_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "category_expenses", force: :cascade do |t|
     t.integer "cat_id", null: false
     t.integer "exp_id", null: false
     t.datetime "created_at", null: false
@@ -44,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_181206) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "categories_expenses", "categories", column: "cat_id"
-  add_foreign_key "categories_expenses", "expenses", column: "exp_id"
+  add_foreign_key "category_expenses", "categories", column: "cat_id"
+  add_foreign_key "category_expenses", "expenses", column: "exp_id"
   add_foreign_key "expenses", "users", column: "id"
 end
