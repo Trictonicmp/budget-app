@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_181206) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon_url"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -42,7 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_181206) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "categories", "users", column: "id"
+  add_foreign_key "categories", "users"
   add_foreign_key "categories_expenses", "categories", column: "cat_id"
   add_foreign_key "categories_expenses", "expenses", column: "exp_id"
   add_foreign_key "expenses", "users", column: "id"
