@@ -22,16 +22,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_183125) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "category_expense", force: :cascade do |t|
-    t.integer "cat_id", null: false
-    t.integer "exp_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "category_expenses", force: :cascade do |t|
-    t.integer "cat_id", null: false
-    t.integer "exp_id", null: false
+    t.integer "category_id", null: false
+    t.integer "expense_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_183125) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "category_expenses", "categories", column: "cat_id"
-  add_foreign_key "category_expenses", "expenses", column: "exp_id"
+  add_foreign_key "category_expenses", "categories"
+  add_foreign_key "category_expenses", "expenses"
   add_foreign_key "expenses", "users", column: "id"
 end
