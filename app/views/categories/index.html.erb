@@ -1,27 +1,29 @@
 
 <ul>
-  <li>
-    <% @categories.each do |category| %>
-      <div>
-        <img
-          src="<%= category.icon_url %>" 
-          alt="<%= category.name %>"
-        />
-      </div>
-      <div>
-        <h2>
-          <%= category.name %>
-        </h2>
-      </div>
-      <div>
-        <% total = 0 %>
-        <% category.expenses.each do |exp| %>
-          <% total += exp.amount %>
-        <%end%>
-        <%= total %>
-      </div>
-    <% end %>
-  </li>
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to(category_path(id: category.id)) do %>
+        <div>
+          <img
+            src="<%= category.icon_url %>" 
+            alt="<%= category.name %>"
+          />
+        </div>
+        <div>
+          <h2>
+            <%= category.name %>
+          </h2>
+        </div>
+        <div>
+          <% total = 0 %>
+          <% category.expenses.each do |exp| %>
+            <% total += exp.amount %>
+          <%end%>
+          <%= total %>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
 </ul>
 
 <%= link_to("Add new Category", new_category_path) %>
