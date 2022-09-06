@@ -7,4 +7,18 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.includes(:expenses).find(params[:id])
   end
+
+  def new
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.new(category_params)
+    @category.user = current_user
+    icon = params[:icon]
+  end
+
+  def category_params
+    params.require(:category).permit(:name)
+  end
 end
