@@ -1,22 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  
+
   let(:user) do
     User.new(
       name: 'John'
       )
     end
-    
-    let(:category) do
-      Category.new(
-        user: user,
-        name: 'Cat 1',
-        icon_url: 'https://i.pinimg.com/474x/57/9b/28/579b286a34070bf119f5f5959f2d2536.jpg'
-      )
-    end
-    
-  before { 
+
+  let(:category) do
+    Category.new(
+      user: user,
+      name: 'Cat 1',
+      icon_url: 'https://i.pinimg.com/474x/57/9b/28/579b286a34070bf119f5f5959f2d2536.jpg'
+    )
+  end
+
+  before {
     user.save
     category.save
   }
