@@ -1,0 +1,35 @@
+<section>
+  <h2>
+    <%= @category.name%>
+  </h2>
+</section>
+
+<section>
+  <h3>
+    Total expenses
+  </h3>
+  <span>
+    <% total = 0 %>
+    <% @category.expenses.each do |expense| %>
+      <% total += expense.amount %>
+    <% end %>
+    <%= total %>
+  </span>
+<section>
+
+<section>
+  <ul>
+    <% @category.expenses.each do |expense| %>
+      <li>
+        <h4>
+          <%= expense.name %>
+        </h4>
+        <span>
+          <%= expense.amount %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to("Add expense",  new_category_expense_path(category_id: @category.id)) %>
+</section>
