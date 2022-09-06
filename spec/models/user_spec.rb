@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:author) do
     User.new(
-      name: 'Amaury Permer',
+      name: 'Amaury Permer'
     )
   end
 
@@ -19,7 +19,6 @@ RSpec.describe User, type: :model do
       author.name = 'a'
       expect(author).to be_valid
     end
-
 
     it 'Name should be changed to "Mario"' do
       author.name = 'Mario'
