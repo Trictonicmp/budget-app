@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :categories 
   resources :expenses
 
-  root "categories#index"
+  # root "categories#index"
   # Defines the root path route ("/")
-  # root "articles#index"
+  root "home#index"
 end
