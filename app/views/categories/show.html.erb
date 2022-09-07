@@ -1,6 +1,6 @@
 <section>
   <div>
-    <% if category.icon.attached? %>
+    <% if @category.icon.attached? %>
       <img
         src="<%= url_for(@category.icon) %>" 
         alt="<%= @category.name %>"
@@ -38,5 +38,5 @@
     <% end %>
   </ul>
 
-  <%= link_to("Add expense",  new_expense_path) %>
+  <%= link_to("Add expense",  new_expense_path(from: @category.id)) %>
 </section>
