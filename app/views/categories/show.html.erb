@@ -1,10 +1,11 @@
 <section>
   <div>
-    <img
-      src="<%= @category.icon_url %>" 
-      alt="<%= @category.name %>"
-    />
-  </div>
+    <% if category.icon.attached? %>
+      <img
+        src="<%= url_for(@category.icon) %>" 
+        alt="<%= @category.name %>"
+      />
+    <% end %>
   <h2>
     <%= @category.name%>
   </h2>
@@ -37,5 +38,5 @@
     <% end %>
   </ul>
 
-  <%= link_to("Add expense",  new_category_expense_path(category_id: @category.id)) %>
+  <%= link_to("Add expense",  new_expense_path) %>
 </section>

@@ -4,10 +4,12 @@
     <li>
       <%= link_to(category_path(id: category.id)) do %>
         <div>
+          <% if category.icon.attached? %>
           <img
-            src="<%= category.icon_url %>" 
+            src="<%= url_for(category.icon) %>" 
             alt="<%= category.name %>"
           />
+          <% end %>
         </div>
         <div>
           <h2>
