@@ -1,0 +1,14 @@
+<section>
+  <%= form_for(@expense) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :amount %>
+    <%= form.number_field :amount, step: :any %>
+    <%= form.fields_for :category_expense do |cat_exp| %>
+      <%= cat_exp.label :category_id %>
+      <% categories_list = current_user.categories.map { |category| [category.name, category.id] } %>
+      <%= cat_exp.select :category_id, categories_list, selected: params[:from] %>
+    <% end %>
+    <%= form.submit "Add expense" %>
+  <% end %>
+</section>
