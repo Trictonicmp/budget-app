@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!
   def index
     @categories = Category.includes(:expenses).where(user_id: current_user.id)
   end
@@ -16,7 +15,13 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user = current_user
     
-    @category.save
+    if @category.save
+      flash[:success] = 'Category added'
+      redirect_to categories_path(id: params[:id])
+    else
+      flash.now[:error] = 'Category could not be saved'
+      render :new
+    end
   end
 
   def category_params
