@@ -8,10 +8,8 @@ class ExpensesController < ApplicationController
     permits = expense_params
     @expense = Expense.new(name: permits[:name], amount: permits[:amount])
     @expense.user_id = current_user.id
-    if !@expense.save
-      flash.now[:error] = 'Expense could not be added'
-    end
-    category_id = permits[:category_expense_attributes]["0"][:category_id]
+    flash.now[:error] = 'Expense could not be added' unless @expense.save
+    category_id = permits[:category_expense_attributes]['0'][:category_id]
     @cat_exp = CategoryExpense.new
     @cat_exp.expense_id = @expense.id
     @cat_exp.category_id = category_id

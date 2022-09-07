@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     @category.user = current_user
-    
+
     if @category.save
       flash[:success] = 'Category added'
       redirect_to categories_path(id: params[:id])
