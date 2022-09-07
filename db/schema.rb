@@ -83,5 +83,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_224633) do
   add_foreign_key "categories", "users"
   add_foreign_key "category_expenses", "categories"
   add_foreign_key "category_expenses", "expenses"
-  add_foreign_key "expenses", "users", column: "id"
+  add_foreign_key "expenses", "users"
 end
