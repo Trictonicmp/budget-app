@@ -6,6 +6,7 @@
   margin-inline: auto;
   display: flex;
   flex-direction: column;
+  padding-top: 2em;
 }
 
 .form-container h2 {

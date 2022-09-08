@@ -11,9 +11,6 @@
 %>
 
 <section class="form-container">
-  <h2>
-    New expense
-  </h2>
   <%= form_for(@expense) do |form| %>
     <div class="form-fields">
       <%= form.text_field :name, placeholder: 'Name' %>
