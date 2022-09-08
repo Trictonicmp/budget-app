@@ -1,6 +1,8 @@
+
 .form-container {
   width: 100%;
   max-width: 360px;
+  height: 100vh;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -9,6 +11,7 @@
 .form-container h2 {
   margin-top: 1em;
   margin-bottom: 0.5em;
+  margin-left: 1em;
   color: var(--text-color);
 }
 
@@ -29,7 +32,8 @@
 form input[type=text],
 form input[type=email],
 form input[type=password],
-form input[type=number] {
+form input[type=number],
+select {
   width: 100%;
   max-width: 380px;
   margin-inline: auto;
@@ -52,6 +56,13 @@ form input[type=email]:not(:placeholder-shown),
 form input[type=password]:not(:placeholder-shown),
 form input[type=number]:not(:placeholder-shown) {
   background-color: white;
+}
+
+form label {
+  font-size: 0.8em;
+  margin-left: 1em;
+  margin-bottom: -1em;
+  color: #aaa;
 }
 
 .links-section {
@@ -77,4 +88,9 @@ form input[type=number]:not(:placeholder-shown) {
 
 .link:hover {
   text-decoration: underline;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
 }
