@@ -1,31 +1,53 @@
+<% total_expenses = 0 %>
+<% @categories.each do |cat| %>
+  <% cat.expenses.each do |expense| %>
+    <% total_expenses += expense.amount %>
+  <% end %>
+<% end %>
 
-<ul>
+<section class="total-header">
+  <h3>
+    Total expenses
+  </h3>
+  <span>
+    $<%= total_expenses.round(2) %>
+  </span>
+</section>
+
+<ul class="categories-container">
   <% @categories.each do |category| %>
-    <li>
+    <li class="category-card">
       <%= link_to(category_path(id: category.id)) do %>
-        <div>
+        <div class="category-icon">
           <% if category.icon.attached? %>
-          <img
-            src="<%= url_for(category.icon) %>" 
-            alt="<%= category.name %>"
-          />
+            <img
+              src="<%= url_for(category.icon) %>" 
+              alt="<%= category.name %>"
+            />
           <% end %>
         </div>
-        <div>
-          <h2>
+        <div class="category-title">
+          <h4>
             <%= category.name %>
-          </h2>
+          </h4>
         </div>
-        <div>
+        <div class="total-spent">
           <% total = 0 %>
           <% category.expenses.each do |exp| %>
             <% total += exp.amount %>
           <%end%>
-          <%= total %>
+          <h5>
+            TOTAL
+          </h5>
+          <span>
+            $<%= total.round(2) %>
+          </span>
         </div>
       <% end %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to("Add new Category", new_category_path) %>
+<section class="button-container">
+  <%= link_to("New Category", new_category_path, class: 'button btn-accept') %>
+</section>
