@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Visit Homepage', type: :feature do
+RSpec.describe 'Visit Homepage', type: :feature do 
   scenario 'Sign up' do
     visit root_path
     click_on 'Sign Up'
@@ -9,7 +9,7 @@ RSpec.describe 'Visit Homepage', type: :feature do
     fill_in 'Password (6 characters minimum)', with: '123456'
     fill_in 'Password confirmation', with: '123456'
     click_on 'Sign up'
-
+    
     expect(page).to have_content('Total expenses')
   end
 end
