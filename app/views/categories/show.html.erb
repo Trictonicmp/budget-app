@@ -27,7 +27,7 @@
     <% @category.expenses.each do |expense| %>
       <% total += expense.amount %>
     <% end %>
-    <%= total.round(2) %>
+    $<%= total.round(2) %>
   </span>
 </section>
 

@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe Category, type: :model do
   let(:user) do
     User.new(
-      name: 'John'
+      name: 'John',
+      email: 'some@email.com',
+      password: '123456'
     )
   end
 
@@ -34,9 +36,9 @@ RSpec.describe Category, type: :model do
       expect(category).to be_valid
     end
 
-    it 'is not valid if icon_url does not exists' do
+    it 'is valid if icon_url does not exists (icon is handled with ActiveStorage)' do
       category.icon_url = nil
-      expect(category).to_not be_valid
+      expect(category).to be_valid
     end
   end
 end
