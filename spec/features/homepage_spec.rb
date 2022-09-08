@@ -1,6 +1,16 @@
 require 'rails_helper'
 
-RSpec.describe 'Visit Homepage', type: :feature do 
+RSpec.describe 'Visit Homepage', type: :feature do
+  scenario 'Spash screen buttons Log In' do
+    visit root_path
+    expect(page).to have_content('Log In')
+  end
+  
+  scenario 'Spash screen buttons Sign Up' do
+    visit root_path
+    expect(page).to have_content('Sign Up')
+  end
+
   scenario 'Sign up' do
     visit root_path
     click_on 'Sign Up'

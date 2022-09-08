@@ -56,13 +56,13 @@
   transform-origin: 0% 100%;
 }
 
-#menu-toggle .back-button span:nth-child(2) {
-  width: 1.5em;
-}
-
 #menu-toggle .back-button span:nth-child(1) {
   width: 1em;
-  transform: translateX(-0.05em) translateY(0.66em) rotate(-45deg);
+  transform: translateX(-0.15em) translateY(0.5em) rotate(-45deg);
+}
+
+#menu-toggle .back-button span:nth-child(2) {
+  width: 1.5em;
 }
 
 #menu-toggle .back-button span:nth-child(3) {
