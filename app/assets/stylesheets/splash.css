@@ -7,7 +7,7 @@
   width: 100%;
   height: 100vh;
   animation: splash;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 .splash img {
