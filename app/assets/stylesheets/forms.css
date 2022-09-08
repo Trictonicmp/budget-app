@@ -1,0 +1,80 @@
+.form-container {
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container h2 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+.form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.fields-container {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=number] {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+  padding: 1em;
+  border: none;
+  outline: none;
+  border-top: 1px solid #dddddd;
+  color: #555555;
+}
+
+form input[type=text]:last-child,
+form input[type=email]:last-child,
+form input[type=password]:last-child,
+form input[type=number]:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+
+form input[type=text]:not(:placeholder-shown),
+form input[type=email]:not(:placeholder-shown),
+form input[type=password]:not(:placeholder-shown),
+form input[type=number]:not(:placeholder-shown) {
+  background-color: white;
+}
+
+.links-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+  margin-top: 2em;
+  gap: 0.3em;
+}
+
+.links-section a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
