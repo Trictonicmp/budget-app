@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   let(:author) do
     User.new(
-      name: 'Amaury Permer'
+      name: 'Amaury Permer',
+      email: 'some@email.com',
+      password: '123456'
     )
   end
 
