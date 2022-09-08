@@ -1,14 +1,28 @@
-<section>
+<% if params.has_key?(:from) %>
+  <% previous_page = category_path(id: params[:from]) %>
+<% else %>
+  <% previous_page = root_path %>
+<% end %>
+
+<%= 
+  render "shared/navigation",
+  nav_title: 'New expense',
+  route_to: previous_page
+%>
+
+<section class="form-container">
   <%= form_for(@expense) do |form| %>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%= form.label :amount %>
-    <%= form.number_field :amount, step: :any %>
+    <div class="form-fields">
+      <%= form.text_field :name, placeholder: 'Name' %>
+      <%= form.number_field :amount, step: :any, placeholder: 'Amount' %>
+    </div>
     <%= form.fields_for :category_expense do |cat_exp| %>
       <%= cat_exp.label :category_id %>
       <% categories_list = current_user.categories.map { |category| [category.name, category.id] } %>
       <%= cat_exp.select :category_id, categories_list, selected: params[:from] %>
     <% end %>
-    <%= form.submit "Add expense" %>
+    <div class="button-container fixed-bottom">
+      <%= form.submit "Add expense", class: 'button btn-accept' %>
+    </div>
   <% end %>
 </section>
