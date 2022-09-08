@@ -1,3 +1,9 @@
+<%= 
+  render "shared/navigation",
+  nav_title: 'New Category',
+  route_to: categories_path
+%>
+
 <section class="form-container">
   <%= form_for(@category) do |form| %>
     <%= form.file_field :icon, accept: 'image/png, image/jpg', required: true %>

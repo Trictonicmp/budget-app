@@ -1,6 +1,17 @@
 <nav role="navigation">
   <div id="menu-toggle">
     <input id="menu-button" type="checkbox" />
+    
+    <% if route_to != nil %>
+      <%= link_to(route_to) do %>  
+        <div class="back-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      <% end %>
+    <% end %>
+    
     <div class="nav-title">
       <h2>
         <%= nav_title %>
@@ -29,7 +40,7 @@
       <%= link_to new_category_path do %>
         <li>Add category</li>
       <% end %>
-      <%= link_to new_expense_path(from: 1) do %>
+      <%= link_to new_expense_path do %>
         <li>Add expense</li>
       <% end %>
 

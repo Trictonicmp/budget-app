@@ -1,3 +1,15 @@
+<% if params.has_key?(:from) %>
+  <% previous_page = category_path(id: params[:from]) %>
+<% else %>
+  <% previous_page = root_path %>
+<% end %>
+
+<%= 
+  render "shared/navigation",
+  nav_title: 'New expense',
+  route_to: previous_page
+%>
+
 <section class="form-container">
   <h2>
     New expense

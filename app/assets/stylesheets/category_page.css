@@ -50,13 +50,3 @@
   font-weight: bold;
   color: var(--text-color);
 }
-
-.nav-title {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.nav-title h2 {
-  color: white;
-  font-size: 1em;
-}
