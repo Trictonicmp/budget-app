@@ -33,3 +33,17 @@
 .btn-secondary:hover {
   text-decoration: underline;
 }
+
+.btn-accept {
+  background-color: #60b524;
+  color: white;
+  outline: 1px solid white;
+}
+
+.btn-accept:hover {
+  background-color: #7fc54c;
+}
+
+.btn-accept:active {
+  background-color: #4d9e13;
+}
