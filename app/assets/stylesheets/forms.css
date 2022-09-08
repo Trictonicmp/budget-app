@@ -65,6 +65,40 @@ form label {
   color: #aaa;
 }
 
+form input[type=file] {
+  display: none;
+}
+
+.icon-input {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  margin: 1em;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.2em;
+  outline: 3px dashed #aaa;
+  font-size: 0.8em;
+  text-transform: uppercase;
+
+  transition: 0.1s ease-in;
+}
+
+.icon-input:hover {
+  outline: 3px dashed var(--main-color);
+  background-color: #1e62af33;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=file]:valid + .icon-input {
+  background-color: #5fb52355;
+  outline: 3px dashed var(--secondary-color);
+  color: white;
+}
+
 .links-section {
   display: flex;
   flex-wrap: wrap;
@@ -93,4 +127,5 @@ form label {
 .fixed-bottom {
   position: fixed;
   bottom: 0;
+  left: 0;
 }

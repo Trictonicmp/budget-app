@@ -1,9 +1,14 @@
-<section>
+<section class="form-container">
   <%= form_for(@category) do |form| %>
-  <%= form.label :icon %>
-    <%= form.file_field :icon, accept: 'image/png, image/jpg' %>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%= form.submit "Add Category" %>
+    <%= form.file_field :icon, accept: 'image/png, image/jpg', required: true %>
+    <%= form.label :icon, "Browse Icon", class: 'icon-input' %>
+
+    <div class="form-fields">
+      <%= form.text_field :name, placeholder: 'Name' %>
+    </div>
+
+    <div class="button-container fixed-bottom">
+      <%= form.submit "Add Category", class: 'button btn-accept' %>
+    </div>
   <% end %>
 </section>
