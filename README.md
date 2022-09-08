@@ -1,60 +1,68 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Walist
 
-> Description the project.
+> Walist is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Languages: Ruby, SQL.
+- Frameworks: Ruby On Rails.
+- Technologies: Rails, PostgreSQL, npm, rubocop, stylelint, Git.
 
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+## [Live preview](https://walist.herokuapp.com)
 
 ## Preview
-![mobile mockup walist](https://user-images.githubusercontent.com/11634112/189240142-df9d5b85-c9cc-40e6-ac04-bdf94c15381c.png)
+
+![mobile mockup walist](https://user-images.githubusercontent.com/11634112/189241178-30ed3e28-e0a8-4d79-be36-42cb9a3f1d96.png)
 
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+## Getting Started!
 
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Node
+- NPM
+- Ruby
+- Rails
+- Rubocop
+- Ruby bundler
+- PostgreSQL
 
 ### Setup
-
+Open your terminal and:
+- Clone this repo
+  - run ```cd /path/where/you/want/to clone/```
+  - run ```git clone https://github.com/Trictonicmp/budget-app```
+  - run ```cd blog-app```
+  
 ### Install
+- Install dependencies
+  - run ```bundle install```
+  - run ```npm install```
+- Create database  
+  - run ```rake db:create``` or ```rails db:create``` 
+  - run ```rake db:migrate``` or ```rails db:migrate```
 
-### Usage
+
+### Run linters
+- run ```rubocop```
+- run ```npx stylelint "**/*.{css,scss}"```
 
 ### Run tests
-
-### Deployment
-
-
+- run ```rspec```
 
 ## Authors
 
-👤 **Author1**
+👤 **Amaury Permer**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Trictonicmp](https://github.com/Trictonicmp)
+- LinkedIn: [Amaury Permer](https://linkedin.com/in/amaury-permer)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -74,6 +82,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
