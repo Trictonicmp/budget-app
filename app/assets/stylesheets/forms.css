@@ -41,15 +41,15 @@ select {
   padding: 1em;
   border: none;
   outline: none;
-  border-top: 1px solid #dddddd;
-  color: #555555;
+  border-top: 1px solid #ddd;
+  color: #555;
 }
 
 form input[type=text]:last-child,
 form input[type=email]:last-child,
 form input[type=password]:last-child,
 form input[type=number]:last-child {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #ddd;
 }
 
 form input[type=text]:not(:placeholder-shown),
@@ -83,7 +83,6 @@ form input[type=file] {
   outline: 3px dashed #aaa;
   font-size: 0.8em;
   text-transform: uppercase;
-
   transition: 0.1s ease-in;
 }
 

@@ -14,12 +14,12 @@
  *= require_self
  */
 
- @import url(reset.css);
- @import url(globals.css);
- @import url(buttons.css);
- @import url(home_page.css);
- @import url(splash.css);
- @import url(forms.css);
- @import url(categories.css);
- @import url(category_page.css);
- @import url(navigation.css);
+@import url(reset.css);
+@import url(globals.css);
+@import url(buttons.css);
+@import url(home_page.css);
+@import url(splash.css);
+@import url(forms.css);
+@import url(categories.css);
+@import url(category_page.css);
+@import url(navigation.css);

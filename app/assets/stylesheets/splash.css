@@ -20,28 +20,32 @@
     background-color: white;
     margin-top: 0;
     opacity: 1;
-  } 
+  }
+
   35% {
     background-color: var(--main-color);
     margin-top: 0;
     opacity: 1;
   }
+
   90% {
     background-color: var(--main-color);
     margin-top: 0;
     opacity: 1;
   }
+
   91% {
     background-color: var(--main-color);
     margin-top: 0;
     opacity: 0.5;
   }
+
   98% {
     margin-top: 0;
     opacity: 0;
   }
+
   98.5% {
-    margin-top: -100%;
     margin-top: -100%;
   }
 }
