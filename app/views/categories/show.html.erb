@@ -1,17 +1,18 @@
-<section>
-  <div>
+<section class="category-header">
+  <div class="category-icon">
     <% if @category.icon.attached? %>
       <img
         src="<%= url_for(@category.icon) %>" 
         alt="<%= @category.name %>"
       />
     <% end %>
+  </div>
   <h2>
     <%= @category.name%>
   </h2>
 </section>
 
-<section>
+<section class="total-header">
   <h3>
     Total expenses
   </h3>
@@ -20,23 +21,26 @@
     <% @category.expenses.each do |expense| %>
       <% total += expense.amount %>
     <% end %>
-    <%= total %>
+    <%= total.round(2) %>
   </span>
-<section>
+</section>
 
-<section>
+<section class="expenses-container">
   <ul>
     <% @category.expenses.each do |expense| %>
-      <li>
+      <li class="expense-card">
         <h4>
           <%= expense.name %>
         </h4>
         <span>
-          <%= expense.amount %>
+          $<%= expense.amount.round(2) %>
         </span>
       </li>
     <% end %>
   </ul>
 
-  <%= link_to("Add expense",  new_expense_path(from: @category.id)) %>
+</section>
+
+<section class="button-container">
+  <%= link_to("Add expense",  new_expense_path(from: @category.id), class: 'button btn-accept') %>
 </section>

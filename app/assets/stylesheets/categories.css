@@ -105,3 +105,8 @@
   justify-content: center;
   background-color: var(--secondary-color);
 }
+
+.button-container .button {
+  width: 100%;
+  margin-inline: auto;
+}
