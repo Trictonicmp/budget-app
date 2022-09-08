@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'App', type: :feature do
-  before {
+  before do
     visit root_path
     click_on 'Sign Up'
     fill_in 'Email', with: 'some.email@gmail.com'
@@ -9,7 +9,7 @@ RSpec.describe 'App', type: :feature do
     fill_in 'Password (6 characters minimum)', with: '123456'
     fill_in 'Password confirmation', with: '123456'
     click_on 'Sign up'
-  }
+  end
 
   scenario 'Create category' do
     click_on 'New Category'
@@ -37,14 +37,14 @@ RSpec.describe 'App', type: :feature do
     click_on 'Add Category'
 
     click_on 'My new category'
-    within(".button-container") do
+    within('.button-container') do
       click_on 'Add expense'
     end
 
     fill_in 'Name', with: 'My first expense'
     fill_in 'Amount', with: '10.5'
-    
-    within(".button-container") do
+
+    within('.button-container') do
       click_on 'Add expense'
     end
 
