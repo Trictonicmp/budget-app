@@ -1,0 +1,28 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: calc(100% - 2em);
+  max-width: 600px;
+  height: calc(100vh - 1em);
+  margin-inline: auto;
+}
+
+.logo-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 80%;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: auto;
+  margin-bottom: 1em;
+}
