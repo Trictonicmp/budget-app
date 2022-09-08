@@ -15,6 +15,10 @@
 
 [Live Demo Link](https://livedemo.com)
 
+## Preview
+![mobile mockup walist](https://user-images.githubusercontent.com/11634112/189240142-df9d5b85-c9cc-40e6-ac04-bdf94c15381c.png)
+
+
 
 ## Getting Started
 
