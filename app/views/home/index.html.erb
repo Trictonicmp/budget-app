@@ -1,0 +1,13 @@
+<section class="splash">
+  <%= image_tag("static/wallist_logo.svg", alt: "Wallist") %>
+</section>
+
+<section class="home-wrapper">
+  <div class="logo-container">
+    <%= image_tag("static/wallist_logo_color.svg", alt: "Wallist") %>
+  </div>
+  <div class="buttons-container">
+    <%= link_to "Log In", new_user_session_path, class: 'button btn-blue' %>
+    <%= link_to "Sign Up", new_user_registration_path, class: 'button btn-secondary' %>
+  </div>
+</section>

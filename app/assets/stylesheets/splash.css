@@ -1,0 +1,51 @@
+.splash {
+  margin-top: -100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  animation: splash;
+  animation-duration: 3s;
+}
+
+.splash img {
+  margin-top: -9em;
+  width: calc(80% - 2em);
+}
+
+@keyframes splash {
+  0% {
+    background-color: white;
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  35% {
+    background-color: var(--main-color);
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  90% {
+    background-color: var(--main-color);
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  91% {
+    background-color: var(--main-color);
+    margin-top: 0;
+    opacity: 0.5;
+  }
+
+  98% {
+    margin-top: 0;
+    opacity: 0;
+  }
+
+  98.5% {
+    margin-top: -100%;
+  }
+}

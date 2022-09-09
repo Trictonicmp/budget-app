@@ -1,0 +1,59 @@
+<%= 
+  render "shared/navigation",
+  nav_title: 'Categories',
+  route_to: nil
+%>
+
+<% total_expenses = 0 %>
+<% @categories.each do |cat| %>
+  <% cat.expenses.each do |expense| %>
+    <% total_expenses += expense.amount %>
+  <% end %>
+<% end %>
+
+<section class="total-header">
+  <h3>
+    Total expenses
+  </h3>
+  <span>
+    $<%= total_expenses.round(2) %>
+  </span>
+</section>
+
+<ul class="categories-container">
+  <% @categories.each do |category| %>
+    <li class="category-card">
+      <%= link_to(category_path(id: category.id)) do %>
+        <div class="category-icon">
+          <% if category.icon.attached? %>
+            <img
+              src="<%= url_for(category.icon) %>" 
+              alt="<%= category.name %>"
+            />
+          <% end %>
+        </div>
+        <div class="category-title">
+          <h4>
+            <%= category.name %>
+          </h4>
+        </div>
+        <div class="total-spent">
+          <% total = 0 %>
+          <% category.expenses.each do |exp| %>
+            <% total += exp.amount %>
+          <%end%>
+          <h5>
+            TOTAL
+          </h5>
+          <span>
+            $<%= total.round(2) %>
+          </span>
+        </div>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<section class="button-container">
+  <%= link_to("New Category", new_category_path, class: 'button btn-accept') %>
+</section>

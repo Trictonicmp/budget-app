@@ -1,0 +1,51 @@
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+}
+
+.category-header h2 {
+  color: var(--text-color);
+  font-size: 2em;
+}
+
+.expenses-container {
+  padding: 1em;
+  padding-bottom: 3em;
+  min-height: calc(100vh - 16em);
+  background-color: #f3f5f4;
+}
+
+.expenses-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.expense-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: #fefefe;
+  outline: 1px solid #eee;
+  border-radius: 0.2em;
+  transition: 0.1s ease-in;
+}
+
+.expense-card:hover {
+  transform: scale(1.03);
+  outline: 1px solid #ddd;
+}
+
+.expense-card h4 {
+  color: #888;
+}
+
+.expense-card span {
+  font-weight: bold;
+  color: var(--text-color);
+}

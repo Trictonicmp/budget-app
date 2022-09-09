@@ -1,0 +1,49 @@
+.button {
+  max-width: 380px;
+  border: none;
+  border-radius: 0.2em;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.btn-blue {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: var(--main-color-hover);
+}
+
+.btn-blue:active {
+  background-color: var(--main-color-active);
+}
+
+.btn-secondary {
+  color: #777;
+}
+
+.btn-secondary:hover {
+  text-decoration: underline;
+}
+
+.btn-accept {
+  background-color: #60b524;
+  color: white;
+  outline: 1px solid white;
+}
+
+.btn-accept:hover {
+  background-color: #7fc54c;
+}
+
+.btn-accept:active {
+  background-color: #4d9e13;
+}

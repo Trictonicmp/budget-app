@@ -1,0 +1,51 @@
+<nav role="navigation">
+  <div id="menu-toggle">
+    <input id="menu-button" type="checkbox" />
+    
+    <% if route_to != nil %>
+      <%= link_to(route_to) do %>  
+        <div class="back-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      <% end %>
+    <% end %>
+    
+    <div class="nav-title">
+      <h2>
+        <%= nav_title %>
+      </h2>
+    </div>
+  
+  <% if user_signed_in? %>
+    <label for="menu-button"> 
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    
+    <ul id="menu">
+      <a href="#">
+        <li>
+          <small>
+            Hi <%= current_user.name %>
+          </small>
+        </li>
+        </br>
+      </a>
+      <%= link_to categories_path do %>
+        <li>Categories</li>
+      <% end %>
+      <%= link_to new_category_path do %>
+        <li>Add category</li>
+      <% end %>
+      <%= link_to new_expense_path do %>
+        <li>Add expense</li>
+      <% end %>
+
+      <%= button_to "Log out", destroy_user_session_path,  method: :delete %>
+    </ul>
+  <% end %>
+  </div>
+</nav>
